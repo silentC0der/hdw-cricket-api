@@ -1,0 +1,42 @@
+{
+  "name": "hdw-cricket-api",
+  "version": "1.0.0",
+  "description": "We’re building a sports app where a user can view a list of popular Cricket players and compare statistics between two players.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build ./server -s",
+    "build": "npm run clean && npm run build-server",
+    "dev": "nodemon ./server/index.js --exec babel-node",
+    "start": "node ./build/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.13.0",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.14.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silentC0der/hdw-cricket-api.git"
+  },
+  "author": "Ashutosh Narayan Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silentC0der/hdw-cricket-api/issues"
+  },
+  "homepage": "https://github.com/silentC0der/hdw-cricket-api#readme"
+}
